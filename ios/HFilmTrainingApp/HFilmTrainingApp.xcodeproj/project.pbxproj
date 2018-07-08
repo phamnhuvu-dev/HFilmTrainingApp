@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EC21EFA20F25B77003AD371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21EF920F25B77003AD371 /* AppDelegate.swift */; };
+		8EC21EFC20F25B77003AD371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21EFB20F25B77003AD371 /* ViewController.swift */; };
+		8EC21EFF20F25B77003AD371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21EFD20F25B77003AD371 /* Main.storyboard */; };
+		8EC21F0120F25B79003AD371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F0020F25B79003AD371 /* Assets.xcassets */; };
+		8EC21F0420F25B79003AD371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F0220F25B79003AD371 /* LaunchScreen.storyboard */; };
+		8EC21F1320F25C67003AD371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F1120F25C67003AD371 /* LoginViewController.swift */; };
+		8EC21F1420F25C67003AD371 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F1220F25C67003AD371 /* LoginViewController.xib */; };
+		8EC21F1920F25C8F003AD371 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F1720F25C8F003AD371 /* RegisterViewController.swift */; };
+		8EC21F1A20F25C8F003AD371 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F1820F25C8F003AD371 /* RegisterViewController.xib */; };
+		8EC21F1E20F25CAF003AD371 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F1C20F25CAF003AD371 /* ForgotPasswordViewController.swift */; };
+		8EC21F1F20F25CAF003AD371 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F1D20F25CAF003AD371 /* ForgotPasswordViewController.xib */; };
+		8EC21F2420F25CDB003AD371 /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F2220F25CDB003AD371 /* FilmDetailViewController.swift */; };
+		8EC21F2520F25CDB003AD371 /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F2320F25CDB003AD371 /* FilmDetailViewController.xib */; };
+		8EC21F2820F25CE7003AD371 /* FilmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F2620F25CE7003AD371 /* FilmListViewController.swift */; };
+		8EC21F2920F25CE7003AD371 /* FilmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21F2720F25CE7003AD371 /* FilmListViewController.xib */; };
+		8EC21F2D20F25DFF003AD371 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F2C20F25DFF003AD371 /* ForgotPasswordViewModel.swift */; };
+		8EC21F2F20F25E1E003AD371 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F2E20F25E1E003AD371 /* RegisterViewModel.swift */; };
+		8EC21F3120F25E30003AD371 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F3020F25E30003AD371 /* LoginViewModel.swift */; };
+		8EC21F3320F25E5A003AD371 /* FilmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F3220F25E5A003AD371 /* FilmDetailViewModel.swift */; };
+		8EC21F3520F25E70003AD371 /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F3420F25E70003AD371 /* FilmListViewModel.swift */; };
+		8EC21F3820F25EDC003AD371 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21F3720F25EDC003AD371 /* ApiService.swift */; };
+		ED89ECCF213057DC482B6F78 /* Pods_HFilmTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7CC34F84EF4897745A5D9 /* Pods_HFilmTrainingApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		34B3C31E2149D96DD13636E6 /* Pods-HFilmTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFilmTrainingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7D7AC8CC91A76AB65D23D94E /* Pods-HFilmTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFilmTrainingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
+		8EC21EF620F25B77003AD371 /* HFilmTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFilmTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC21EF920F25B77003AD371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EC21EFB20F25B77003AD371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EC21EFE20F25B77003AD371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EC21F0020F25B79003AD371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EC21F0320F25B79003AD371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EC21F0520F25B79003AD371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC21F1120F25C67003AD371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8EC21F1220F25C67003AD371 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8EC21F1720F25C8F003AD371 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8EC21F1820F25C8F003AD371 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		8EC21F1C20F25CAF003AD371 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8EC21F1D20F25CAF003AD371 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		8EC21F2220F25CDB003AD371 /* FilmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
+		8EC21F2320F25CDB003AD371 /* FilmDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmDetailViewController.xib; sourceTree = "<group>"; };
+		8EC21F2620F25CE7003AD371 /* FilmListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewController.swift; sourceTree = "<group>"; };
+		8EC21F2720F25CE7003AD371 /* FilmListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmListViewController.xib; sourceTree = "<group>"; };
+		8EC21F2C20F25DFF003AD371 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		8EC21F2E20F25E1E003AD371 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		8EC21F3020F25E30003AD371 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8EC21F3220F25E5A003AD371 /* FilmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewModel.swift; sourceTree = "<group>"; };
+		8EC21F3420F25E70003AD371 /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
+		8EC21F3720F25EDC003AD371 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		F9B7CC34F84EF4897745A5D9 /* Pods_HFilmTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HFilmTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EC21EF320F25B77003AD371 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED89ECCF213057DC482B6F78 /* Pods_HFilmTrainingApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EE68CA4C93490B48B6DA425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B7CC34F84EF4897745A5D9 /* Pods_HFilmTrainingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC21EED20F25B77003AD371 = {
+			isa = PBXGroup;
+			children = (
+				8EC21EF820F25B77003AD371 /* HFilmTrainingApp */,
+				8EC21EF720F25B77003AD371 /* Products */,
+				B78971A5C4917CFAB5AB7F26 /* Pods */,
+				1EE68CA4C93490B48B6DA425 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8EC21EF720F25B77003AD371 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21EF620F25B77003AD371 /* HFilmTrainingApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EC21EF820F25B77003AD371 /* HFilmTrainingApp */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F0C20F25BF7003AD371 /* datas */,
+				8EC21F0B20F25BEC003AD371 /* features */,
+				8EC21F0D20F25BFB003AD371 /* modules */,
+				8EC21F0E20F25C1A003AD371 /* views */,
+				8EC21EF920F25B77003AD371 /* AppDelegate.swift */,
+				8EC21EFB20F25B77003AD371 /* ViewController.swift */,
+				8EC21EFD20F25B77003AD371 /* Main.storyboard */,
+				8EC21F0020F25B79003AD371 /* Assets.xcassets */,
+				8EC21F0220F25B79003AD371 /* LaunchScreen.storyboard */,
+				8EC21F0520F25B79003AD371 /* Info.plist */,
+			);
+			path = HFilmTrainingApp;
+			sourceTree = "<group>";
+		};
+		8EC21F0B20F25BEC003AD371 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F1020F25C4C003AD371 /* user */,
+				8EC21F0F20F25C3F003AD371 /* film */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		8EC21F0C20F25BF7003AD371 /* datas */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F2B20F25D02003AD371 /* user */,
+				8EC21F2A20F25CFD003AD371 /* film */,
+			);
+			path = datas;
+			sourceTree = "<group>";
+		};
+		8EC21F0D20F25BFB003AD371 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F3620F25EB9003AD371 /* api_service */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		8EC21F0E20F25C1A003AD371 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8EC21F0F20F25C3F003AD371 /* film */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F2120F25CC6003AD371 /* film_detail */,
+				8EC21F2020F25CBE003AD371 /* film_list */,
+			);
+			path = film;
+			sourceTree = "<group>";
+		};
+		8EC21F1020F25C4C003AD371 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F1B20F25C94003AD371 /* forgot_password */,
+				8EC21F1620F25C74003AD371 /* register */,
+				8EC21F1520F25C6C003AD371 /* login */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		8EC21F1520F25C6C003AD371 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F1120F25C67003AD371 /* LoginViewController.swift */,
+				8EC21F3020F25E30003AD371 /* LoginViewModel.swift */,
+				8EC21F1220F25C67003AD371 /* LoginViewController.xib */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		8EC21F1620F25C74003AD371 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F1720F25C8F003AD371 /* RegisterViewController.swift */,
+				8EC21F2E20F25E1E003AD371 /* RegisterViewModel.swift */,
+				8EC21F1820F25C8F003AD371 /* RegisterViewController.xib */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		8EC21F1B20F25C94003AD371 /* forgot_password */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F1C20F25CAF003AD371 /* ForgotPasswordViewController.swift */,
+				8EC21F2C20F25DFF003AD371 /* ForgotPasswordViewModel.swift */,
+				8EC21F1D20F25CAF003AD371 /* ForgotPasswordViewController.xib */,
+			);
+			path = forgot_password;
+			sourceTree = "<group>";
+		};
+		8EC21F2020F25CBE003AD371 /* film_list */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F2620F25CE7003AD371 /* FilmListViewController.swift */,
+				8EC21F3420F25E70003AD371 /* FilmListViewModel.swift */,
+				8EC21F2720F25CE7003AD371 /* FilmListViewController.xib */,
+			);
+			path = film_list;
+			sourceTree = "<group>";
+		};
+		8EC21F2120F25CC6003AD371 /* film_detail */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F2220F25CDB003AD371 /* FilmDetailViewController.swift */,
+				8EC21F3220F25E5A003AD371 /* FilmDetailViewModel.swift */,
+				8EC21F2320F25CDB003AD371 /* FilmDetailViewController.xib */,
+			);
+			path = film_detail;
+			sourceTree = "<group>";
+		};
+		8EC21F2A20F25CFD003AD371 /* film */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = film;
+			sourceTree = "<group>";
+		};
+		8EC21F2B20F25D02003AD371 /* user */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		8EC21F3620F25EB9003AD371 /* api_service */ = {
+			isa = PBXGroup;
+			children = (
+				8EC21F3720F25EDC003AD371 /* ApiService.swift */,
+			);
+			path = api_service;
+			sourceTree = "<group>";
+		};
+		B78971A5C4917CFAB5AB7F26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34B3C31E2149D96DD13636E6 /* Pods-HFilmTrainingApp.debug.xcconfig */,
+				7D7AC8CC91A76AB65D23D94E /* Pods-HFilmTrainingApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EC21EF520F25B77003AD371 /* HFilmTrainingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EC21F0820F25B79003AD371 /* Build configuration list for PBXNativeTarget "HFilmTrainingApp" */;
+			buildPhases = (
+				157226AD456D1138AFA2540C /* [CP] Check Pods Manifest.lock */,
+				8EC21EF220F25B77003AD371 /* Sources */,
+				8EC21EF320F25B77003AD371 /* Frameworks */,
+				8EC21EF420F25B77003AD371 /* Resources */,
+				456D2766438210C5B9AE2C19 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HFilmTrainingApp;
+			productName = HFilmTrainingApp;
+			productReference = 8EC21EF620F25B77003AD371 /* HFilmTrainingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EC21EEE20F25B77003AD371 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Phạm Như Vũ";
+				TargetAttributes = {
+					8EC21EF520F25B77003AD371 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8EC21EF120F25B77003AD371 /* Build configuration list for PBXProject "HFilmTrainingApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EC21EED20F25B77003AD371;
+			productRefGroup = 8EC21EF720F25B77003AD371 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EC21EF520F25B77003AD371 /* HFilmTrainingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EC21EF420F25B77003AD371 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC21F1F20F25CAF003AD371 /* ForgotPasswordViewController.xib in Resources */,
+				8EC21F2520F25CDB003AD371 /* FilmDetailViewController.xib in Resources */,
+				8EC21F1420F25C67003AD371 /* LoginViewController.xib in Resources */,
+				8EC21F1A20F25C8F003AD371 /* RegisterViewController.xib in Resources */,
+				8EC21F0420F25B79003AD371 /* LaunchScreen.storyboard in Resources */,
+				8EC21F0120F25B79003AD371 /* Assets.xcassets in Resources */,
+				8EC21F2920F25CE7003AD371 /* FilmListViewController.xib in Resources */,
+				8EC21EFF20F25B77003AD371 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		157226AD456D1138AFA2540C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HFilmTrainingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		456D2766438210C5B9AE2C19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EC21EF220F25B77003AD371 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC21F2D20F25DFF003AD371 /* ForgotPasswordViewModel.swift in Sources */,
+				8EC21F1320F25C67003AD371 /* LoginViewController.swift in Sources */,
+				8EC21F1E20F25CAF003AD371 /* ForgotPasswordViewController.swift in Sources */,
+				8EC21F3320F25E5A003AD371 /* FilmDetailViewModel.swift in Sources */,
+				8EC21EFC20F25B77003AD371 /* ViewController.swift in Sources */,
+				8EC21F2820F25CE7003AD371 /* FilmListViewController.swift in Sources */,
+				8EC21F3520F25E70003AD371 /* FilmListViewModel.swift in Sources */,
+				8EC21F3820F25EDC003AD371 /* ApiService.swift in Sources */,
+				8EC21F2420F25CDB003AD371 /* FilmDetailViewController.swift in Sources */,
+				8EC21EFA20F25B77003AD371 /* AppDelegate.swift in Sources */,
+				8EC21F2F20F25E1E003AD371 /* RegisterViewModel.swift in Sources */,
+				8EC21F3120F25E30003AD371 /* LoginViewModel.swift in Sources */,
+				8EC21F1920F25C8F003AD371 /* RegisterViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8EC21EFD20F25B77003AD371 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC21EFE20F25B77003AD371 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EC21F0220F25B79003AD371 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC21F0320F25B79003AD371 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EC21F0620F25B79003AD371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8EC21F0720F25B79003AD371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EC21F0920F25B79003AD371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34B3C31E2149D96DD13636E6 /* Pods-HFilmTrainingApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 277C8MZCDC;
+				INFOPLIST_FILE = HFilmTrainingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamnhuvu.ios.HFilmTrainingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EC21F0A20F25B79003AD371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D7AC8CC91A76AB65D23D94E /* Pods-HFilmTrainingApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 277C8MZCDC;
+				INFOPLIST_FILE = HFilmTrainingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamnhuvu.ios.HFilmTrainingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EC21EF120F25B77003AD371 /* Build configuration list for PBXProject "HFilmTrainingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC21F0620F25B79003AD371 /* Debug */,
+				8EC21F0720F25B79003AD371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EC21F0820F25B79003AD371 /* Build configuration list for PBXNativeTarget "HFilmTrainingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC21F0920F25B79003AD371 /* Debug */,
+				8EC21F0A20F25B79003AD371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EC21EEE20F25B77003AD371 /* Project object */;
+}
