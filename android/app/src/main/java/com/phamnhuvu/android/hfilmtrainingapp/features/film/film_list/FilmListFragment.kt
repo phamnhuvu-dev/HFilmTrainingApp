@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.phamnhuvu.android.hfilmtrainingapp.BaseFragment
 
 import com.phamnhuvu.android.hfilmtrainingapp.R
 import com.phamnhuvu.android.hfilmtrainingapp.datas.film.Film
@@ -22,7 +23,7 @@ import com.phamnhuvu.android.hfilmtrainingapp.views.Header
  * A simple [Fragment] subclass.
  *
  */
-class FilmListFragment : Fragment() {
+class FilmListFragment : BaseFragment() {
 
   private lateinit var _header: Header
   private lateinit var _recycler: RecyclerView
@@ -88,8 +89,14 @@ class FilmListFragment : Fragment() {
       fun bind(film: Film) {
         Glide.with(itemView).load(film.image).into(imgPoster)
         val titles = film.title.split(" / ")
-        tvEnglishTitle.text = titles[0]
-        tvVietNamTitle.text = titles[1]
+        if (titles.size > 1) {
+          tvEnglishTitle.text = titles[0]
+          tvVietNamTitle.text = titles[1]
+        } else {
+          tvEnglishTitle.text = titles[0]
+          tvVietNamTitle.text = titles[0]
+        }
+
         tvView.text = film.views.toString()
         tvDescription.text = film.description
       }
