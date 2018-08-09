@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EADC88520F3CD91008187B7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EADC88420F3CD91008187B7 /* Header.swift */; };
 		8EC21EFA20F25B77003AD371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21EF920F25B77003AD371 /* AppDelegate.swift */; };
 		8EC21EFC20F25B77003AD371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21EFB20F25B77003AD371 /* ViewController.swift */; };
 		8EC21EFF20F25B77003AD371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21EFD20F25B77003AD371 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		34B3C31E2149D96DD13636E6 /* Pods-HFilmTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFilmTrainingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D7AC8CC91A76AB65D23D94E /* Pods-HFilmTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFilmTrainingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFilmTrainingApp/Pods-HFilmTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
+		8EADC88420F3CD91008187B7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		8EC21EF620F25B77003AD371 /* HFilmTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFilmTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC21EF920F25B77003AD371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC21EFB20F25B77003AD371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		8EC21F0E20F25C1A003AD371 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				8EADC88420F3CD91008187B7 /* Header.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				8EC21F3820F25EDC003AD371 /* ApiService.swift in Sources */,
 				8EC21F2420F25CDB003AD371 /* FilmDetailViewController.swift in Sources */,
 				8EC21EFA20F25B77003AD371 /* AppDelegate.swift in Sources */,
+				8EADC88520F3CD91008187B7 /* Header.swift in Sources */,
 				8EC21F2F20F25E1E003AD371 /* RegisterViewModel.swift in Sources */,
 				8EC21F3120F25E30003AD371 /* LoginViewModel.swift in Sources */,
 				8EC21F1920F25C8F003AD371 /* RegisterViewController.swift in Sources */,
@@ -525,7 +529,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 277C8MZCDC;
 				INFOPLIST_FILE = HFilmTrainingApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phamnhuvu.ios.HFilmTrainingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -541,7 +548,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 277C8MZCDC;
 				INFOPLIST_FILE = HFilmTrainingApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phamnhuvu.ios.HFilmTrainingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

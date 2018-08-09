@@ -21,7 +21,7 @@ export default class Header extends Component{
 
 const styles = StyleSheet.create({
   parent: {
-    height: 56,
+    height: 48,
     backgroundColor: 'orange',
     justifyContent: 'center',
     alignItems: 'center'

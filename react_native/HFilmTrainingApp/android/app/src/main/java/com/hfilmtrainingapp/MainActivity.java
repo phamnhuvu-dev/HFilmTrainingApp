@@ -1,8 +1,15 @@
 package com.hfilmtrainingapp;
 
+import android.util.Log;
+import android.view.KeyEvent;
+
 import com.facebook.react.ReactActivity;
+import com.facebook.react.bridge.ReactMethod;
 
 public class MainActivity extends ReactActivity {
+
+
+    public static Boolean isLastScreen = false;
 
     /**
      * Returns the name of the main component registered from JavaScript.
@@ -11,5 +18,14 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "HFilmTrainingApp";
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isLastScreen) {
+            moveTaskToBack(false);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

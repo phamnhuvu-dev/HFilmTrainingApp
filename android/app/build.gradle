@@ -39,5 +39,15 @@ dependencies {
     def retrofit_version = "2.4.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    def glide_version = "4.7.1"
+    implementation "com.github.bumptech.glide:glide:${glide_version}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${glide_version}"
+
+    def rx_version = "2.2.0"
+    implementation "io.reactivex.rxjava2:rxkotlin:${rx_version}"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

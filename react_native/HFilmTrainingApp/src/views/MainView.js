@@ -6,12 +6,14 @@ export default class MainView extends Component{
 
   render() {
     return (
-      <ImageBackground
-        style={{flex: 1}}
-        source={require('../assets/image/bg.png')}>
-        <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView
+        forceInset={{bottom: 'never'}}
+        style={{flex: 1, backgroundColor: 'orange'}}>
+        <ImageBackground
+          style={{flex: 1}}
+          source={require('../assets/image/bg.png')}>
           {this.props.children}
-        </SafeAreaView>
-      </ImageBackground>)
+        </ImageBackground>
+      </SafeAreaView>)
   }
 }

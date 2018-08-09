@@ -1,26 +1,23 @@
 import React, {Component} from "react";
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 export default class Button extends Component{
 
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
-
     return (
-      <View style={[styles.parent, this.props.style]}>
+      <TouchableOpacity
+        onPress={this.props.onPress}
+        style={[styles.parent, this.props.style]}>
         <Text style={styles.title}>{this.props.children}</Text>
-      </View>
-
+      </TouchableOpacity>
     )
   }
 }
 
 const styles = StyleSheet.create({
   parent: {
+    borderRadius: 5,
+    paddingHorizontal: 20,
     height: 40,
     backgroundColor: 'orange',
     justifyContent: 'center',
