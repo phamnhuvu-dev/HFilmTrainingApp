@@ -1,7 +1,7 @@
 package com.phamnhuvu.android.hfilmtrainingapp.datas
 
 import com.phamnhuvu.android.hfilmtrainingapp.datas.film.FilmApiDataSource
-import com.phamnhuvu.android.hfilmtrainingapp.datas.film.FilmCacheDataSource
+import com.phamnhuvu.android.hfilmtrainingapp.datas.film.FilmLocalDataSource
 import com.phamnhuvu.android.hfilmtrainingapp.datas.film.FilmRepository
 import com.phamnhuvu.android.hfilmtrainingapp.datas.user.UserApiDataSource
 import com.phamnhuvu.android.hfilmtrainingapp.datas.user.UserRepository
@@ -14,7 +14,7 @@ class Repository {
         if (field != null) return field
         field = FilmRepository(
           FilmApiDataSource(),
-          FilmCacheDataSource())
+          FilmLocalDataSource())
         return field
       }
 

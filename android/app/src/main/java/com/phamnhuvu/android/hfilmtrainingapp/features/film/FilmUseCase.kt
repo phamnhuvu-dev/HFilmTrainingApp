@@ -2,7 +2,7 @@ package com.phamnhuvu.android.hfilmtrainingapp.features.film
 
 import com.phamnhuvu.android.hfilmtrainingapp.datas.Page
 import com.phamnhuvu.android.hfilmtrainingapp.datas.Repository
-import com.phamnhuvu.android.hfilmtrainingapp.datas.film.Film
+import com.phamnhuvu.android.hfilmtrainingapp.datas.film.model.Film
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -33,17 +33,17 @@ class FilmUseCase {
               jsonFilm = jsonData.getJSONObject(index)
               films.add(
                 Film(
-                  id           = jsonFilm.getInt("id"),
-                  title        = jsonFilm.getString("title"),
-                  image        = jsonFilm.getString("image"),
-                  link         = jsonFilm.getString("link"),
-                  description  = jsonFilm.getString("description"),
-                  category     = jsonFilm.getString("category"),
-                  actor        = jsonFilm.getString("actor"),
-                  director     = jsonFilm.getString("director"),
+                  id = jsonFilm.getInt("id"),
+                  title = jsonFilm.getString("title"),
+                  image = jsonFilm.getString("image"),
+                  link = jsonFilm.getString("link"),
+                  description = jsonFilm.getString("description"),
+                  category = jsonFilm.getString("category"),
+                  actor = jsonFilm.getString("actor"),
+                  director = jsonFilm.getString("director"),
                   manufacturer = jsonFilm.getString("manufacturer"),
-                  duration     = jsonFilm.getString("duration"),
-                  views        = jsonFilm.getInt("views")
+                  duration = jsonFilm.getString("duration"),
+                  views = jsonFilm.getInt("views")
                 )
               )
             }
@@ -52,6 +52,10 @@ class FilmUseCase {
         }
         .subscribeOn(Schedulers.computation())
         .observeOn(AndroidSchedulers.mainThread())
+    }
+
+    fun likeFilm() {
+
     }
   }
 }

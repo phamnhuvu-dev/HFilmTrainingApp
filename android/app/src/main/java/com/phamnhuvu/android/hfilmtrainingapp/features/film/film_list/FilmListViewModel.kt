@@ -2,7 +2,7 @@ package com.phamnhuvu.android.hfilmtrainingapp.features.film.film_list
 
 import android.arch.lifecycle.ViewModel
 import com.phamnhuvu.android.hfilmtrainingapp.datas.Page
-import com.phamnhuvu.android.hfilmtrainingapp.datas.film.Film
+import com.phamnhuvu.android.hfilmtrainingapp.datas.film.model.Film
 import com.phamnhuvu.android.hfilmtrainingapp.features.film.FilmUseCase
 import io.reactivex.Completable
 

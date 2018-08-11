@@ -1,4 +1,4 @@
-package com.phamnhuvu.android.hfilmtrainingapp.modules.api_service
+package com.phamnhuvu.android.hfilmtrainingapp.modules.retrofit
 
 import com.phamnhuvu.android.hfilmtrainingapp.BuildConfig
 import retrofit2.Retrofit

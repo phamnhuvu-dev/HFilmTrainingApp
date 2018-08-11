@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide
 import com.phamnhuvu.android.hfilmtrainingapp.BaseFragment
 
 import com.phamnhuvu.android.hfilmtrainingapp.R
-import com.phamnhuvu.android.hfilmtrainingapp.datas.film.Film
+import com.phamnhuvu.android.hfilmtrainingapp.datas.film.model.Film
 import com.phamnhuvu.android.hfilmtrainingapp.views.Header
 
 /**

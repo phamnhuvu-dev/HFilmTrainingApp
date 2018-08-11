@@ -1,4 +1,4 @@
-package com.phamnhuvu.android.hfilmtrainingapp.modules.api_service
+package com.phamnhuvu.android.hfilmtrainingapp.modules.retrofit
 
 import io.reactivex.Observable
 import okhttp3.ResponseBody
