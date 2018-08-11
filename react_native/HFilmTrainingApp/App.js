@@ -7,10 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from 'react-navigation';
-import {SafeAreaView} from 'react-native'
-import FilmListScreen from './src/features/film/film_list/FilmListScreen'
+import FilmListScreen from './src/features/film/film_list/film-list-screen'
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducers from './src/features/film/redux/reducers'

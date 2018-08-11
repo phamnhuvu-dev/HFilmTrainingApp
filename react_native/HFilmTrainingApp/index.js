@@ -6,11 +6,13 @@ import React, { Component } from 'react';
 import {name as appName} from './app.json';
 import {createStackNavigator} from 'react-navigation';
 
-import FilmListScreen from './src/features/film/film_list/FilmListScreen'
+import FilmListScreen from './src/features/film/film_list/film-list-screen'
 import FilmDetailScreen from "./src/features/film/film_detail/FilmDetailScreen";
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
-import Reducers from "./src/Reducers";
+import reducers from "./src/reducers";
+import FilmState from "./src/features/film/film-state";
+import Page from "./src/datas/page";
 
 const RootStack = createStackNavigator({
   FilmList: {
@@ -26,11 +28,11 @@ const RootStack = createStackNavigator({
   initialRouteName: 'FilmList'
 });
 
-let store = createStore(Reducers);
+let store = createStore(reducers);
 
 const App = () => (
   <Provider store={store}>
-    <RootStack/>
+    <RootStack screenProps={store}/>
   </Provider>
 );
 

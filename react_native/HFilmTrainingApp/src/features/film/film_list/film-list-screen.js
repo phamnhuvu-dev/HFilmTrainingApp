@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import {Platform, StyleSheet, Text, View, FlatList, Image, StatusBar, BackHandler, NativeModules} from 'react-native';
 
 import Header from "../../../views/Header";
@@ -6,8 +6,9 @@ import Button from "../../../views/Button";
 import MainView from "../../../views/MainView";
 import LikeButton from "../../../views/LikeButton";
 import connect from "react-redux/es/connect/connect";
-import {addFilm, clickLike, fetchFilm, fetchFilms, requestFilms} from "../film-reducers";
+import {addFilm, clickLike, fetchFilm, requestFilms} from "../film-reducers";
 import Repository from "../../../datas/Repository";
+import {fetchFilms} from "./film-list-controller";
 
 
 
@@ -15,66 +16,28 @@ class FilmListScreen extends Component {
 
   constructor(props) {
     super(props);
+    // let filmState = this.props.screenProps.getState().FilmReducers;
     this.state = {
       isBacking: false,
-    }
+      films: this.props.filmState.films,
+      page: this.props.filmState.page,
+    };
+
+    console.log(this.state);
   }
+
+
 
   _loadMore = () => {
-    this._call()
-      .then(films => this.props.screenProps.dispatch(addFilm(films)))
-    // Repository.film.api.getFilms(store.getState().FilmReducers.page.current + 1)
-    //   .then(
-    //     films => {
-    //       console.log("run");
-    //       // try {
-    //       for (let item of films) {
-    //         let titles = item.title.split(" / ");
-    //         if (titles.length > 1) {
-    //           item.englishTitle = titles[0];
-    //           item.vietnamTitle = titles[1];
-    //         } else {
-    //           item.englishTitle = titles[0];
-    //           item.vietnamTitle = item.englishTitle;
-    //         }
-    //         item.title = null;
-    //         item.like = false;
-    //       }
-    //
-    //       store.getState().FilmReducers.films.push(...films);
-    //       store.getState().FilmReducers.page.current = store.getState().FilmReducers.page.current + 1;
-    //       store.getState().FilmReducers.page.isLoading = false;
-    //       console.log(store.getState().FilmReducers);
-    //       dispatch(addFilm(store.getState().FilmReducers))
-    //     }
-    //   )
-    //   .catch(error => {
-    //     if (error.toString() !== "TypeError: Invalid attempt to spread non-iterable instance") {
-    //       console.log(error.toString())
-    //     }
-    //   });
-    // // this.props.screenProps
-    // //   .dispatch(requestFilms())
+    fetchFilms(this.state)
+      .then(films => this.setState({}))
+      .catch(error => console.log());
   };
 
-  async _call()  {
-    let films = await Repository.film.api.getFilms(this.props.filmState.page.current + 1);
-    for (let item of films) {
-      let titles = item.title.split(" / ");
-      if (titles.length > 1) {
-        item.englishTitle = titles[0];
-        item.vietnamTitle = titles[1];
-      } else {
-        item.englishTitle = titles[0];
-        item.vietnamTitle = item.englishTitle;
-      }
-      item.title = null;
-      item.like = false;
-    }
-    return films;
-  }
-
   componentDidMount() {
+    if (Platform.OS === 'android') {
+      NativeModules.LastScreen.setIsLastScreen();
+    }
     this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
       if (!this.state.isBacking) {
         this.state.isBacking = true;
@@ -90,18 +53,22 @@ class FilmListScreen extends Component {
 
 
   render() {
-    if (this.props.filmState.films.length === 0) {
+    console.log(this.props.screenProps.getState());
+    this.state.films = this.props.filmState.films;
+    if (this.state.films.length === 0) {
       this._loadMore();
     }
+    // console.log(this.state);
     return (
       <MainView style={{flex: 1}}>
         <Header>HFilm</Header>
         <FlatList
-          data={this.props.filmState.films}
+          data={this.state.films}
           extraData={this.state}
           keyExtractor={this._keyExtractor}
           renderItem={this._renderItem}
           onEndReached={this._loadMore}
+          onEndReachedThreshold={1/this.state.films.length}
         />
       </MainView>
     )
@@ -124,12 +91,15 @@ class FilmListScreen extends Component {
           <Text numberOfLines={5} style={itemStyles.text}>{item.description}</Text>
           <View style={itemStyles.buttons_parent}>
             <LikeButton
-              onPress={() => this.props.screenProps.dispatch(clickLike(item.id))}
+              onPress={() => {
+                item.like = !item.like;
+                this.setState({})
+              }}
               style={itemStyles.like_button}
               index={index}
               like={item.like}>Thích</LikeButton>
             <Button
-              onPress={() => this.props.navigation.navigate('FilmDetail', {id: item.id})}
+              onPress={() => this.props.navigation.navigate('FilmDetail', {film: item})}
               style={itemStyles.watch_button}>Xem phim</Button>
           </View>
         </View>
@@ -210,4 +180,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(FilmListScreen);
+export default connect(mapStateToProps, null)(FilmListScreen);

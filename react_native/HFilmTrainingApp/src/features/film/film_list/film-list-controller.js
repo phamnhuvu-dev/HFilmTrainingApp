@@ -1,24 +1,15 @@
 import Repository from "../../../datas/Repository";
 
+export const fetchFilms = async (state) => {
+  if (!state.page.isLoading) {
+    state.page.isLoading = true;
+    state.page.current++;
 
-export default class FilmListViewModel {
-
-  constructor() {
-    this._films = [];
-    this._currentPage = 0;
-    this._maxPage = 4;
-  }
-
-  get films() {
-    return this._films
-  }
-
-  async loadFilms() {
-    ++this._currentPage;
-    if (this._currentPage >= this._maxPage) return false;
-    try {
-      let films = await Repository.film.api.getFilms(this._currentPage);
-
+    let films = await Repository.film.api.getFilms(state.page.current);
+    if (films.length === 0) {
+      console.log("empty");
+      state.page.current--;
+    } else {
       for (let item of films) {
         let titles = item.title.split(" / ");
         if (titles.length > 1) {
@@ -31,11 +22,12 @@ export default class FilmListViewModel {
         item.title = null;
         item.like = false;
       }
-      return films;
-    } catch (e) {
-      --this._currentPage;
-      return [];
+      state.films.push(...films);
     }
+
+    console.log("request " + state.page.current);
+    state.page.isLoading = false;
+    return films;
   }
-}
+};
 

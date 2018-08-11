@@ -5,7 +5,7 @@ import Header from "../../../views/Header";
 import Button from "../../../views/Button";
 import MainView from "../../../views/MainView";
 import LikeButton from "../../../views/LikeButton";
-import {clickLike} from "../FilmReducers";
+import {clickLike, syncData} from "../film-reducers";
 import {connect} from 'react-redux';
 
 class FilmDetailScreen extends Component {
@@ -14,7 +14,8 @@ class FilmDetailScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isBacking: false
+      isBacking: false,
+      film: this.props.navigation.getParam('film')
     }
   }
 
@@ -23,12 +24,14 @@ class FilmDetailScreen extends Component {
       NativeModules.LastScreen.setIsNotLastScreen();
     }
     this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      this.props.screenProps.dispatch(syncData(this.state, "FILM_DETAIL"));
       this.props.navigation.goBack();
       return true;
     });
   }
 
   componentWillUnmount() {
+
     if (Platform.OS === 'android') {
       NativeModules.LastScreen.setIsLastScreen();
     }
@@ -37,7 +40,7 @@ class FilmDetailScreen extends Component {
 
   render() {
 
-    let item = this.props.item;
+    let item = this.state.film;
     if (item === undefined) return (
       <MainView style={{flex: 1}}>
 
@@ -58,7 +61,10 @@ class FilmDetailScreen extends Component {
             <View style={styles.buttons_parent}>
               <LikeButton
                 onPress={() => {
-                  this.props.clickLike(item.id);
+                  item.like = !item.like;
+                  this.setState({});
+                  // this.props.screenProps.dispatch(clickLike(item.id))
+                  // this.props.clickLike(item.id);
                 }}
                 style={styles.like_button}
                 like={item.like}>Thích</LikeButton>
@@ -80,7 +86,7 @@ class FilmDetailScreen extends Component {
 const mapStateToProps = (state, props) => {
   console.log(props);
   return {
-    item: (state.FilmReducers.filter(film => film.id === props.navigation.getParam('id')))[0]
+    item: (state.FilmReducers.films.filter(film => film.id === props.navigation.getParam('id')))[0]
   }
 };
 
@@ -88,7 +94,7 @@ const mapDispatchToProps = (dispatch) => ({
   clickLike: (id) => dispatch(clickLike(id)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilmDetailScreen);
+export default connect(null, null)(FilmDetailScreen);
 
 const styles = StyleSheet.create({
   container: {

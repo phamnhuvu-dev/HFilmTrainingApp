@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import FilmReducers from "./features/film/FilmReducers";
+import {FilmReducers} from "./features/film/film-reducers";
 
-const Reducers = combineReducers({
+const reducers = combineReducers({
   FilmReducers,
 });
 
-export default Reducers
+export default reducers
