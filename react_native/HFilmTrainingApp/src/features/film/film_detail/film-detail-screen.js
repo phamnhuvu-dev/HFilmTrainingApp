@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image, BackHandler, NativeModules} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image, BackHandler, NativeModules, WebView, Dimensions, ScrollView} from 'react-native';
 
 import Header from "../../../views/Header";
 import Button from "../../../views/Button";
@@ -10,12 +10,12 @@ import {connect} from 'react-redux';
 
 class FilmDetailScreen extends Component {
 
-
   constructor(props) {
     super(props);
     this.state = {
       isBacking: false,
-      film: this.props.navigation.getParam('film')
+      film: this.props.navigation.getParam('film'),
+      width: Dimensions.get('window').width
     }
   }
 
@@ -46,37 +46,46 @@ class FilmDetailScreen extends Component {
 
       </MainView>
     );
+    console.log("render");
     return (
-      <MainView style={{flex: 1}}>
-        <Header>{item.englishTitle}</Header>
-        <View style={styles.container}>
-          <Image
-            style={styles.poster}
-            source={{uri: item.image}}
-          />
-          <View style={styles.content}>
-            <Text numberOfLines={1} style={styles.title}>{item.vietnamTitle}</Text>
-            <Text style={[styles.text, {fontStyle: 'italic'}]}>Lượt view: {item.views}</Text>
-            <Text numberOfLines={5} style={styles.text}>{item.description}</Text>
-            <View style={styles.buttons_parent}>
-              <LikeButton
-                onPress={() => {
-                  item.like = !item.like;
-                  this.setState({});
-                  // this.props.screenProps.dispatch(clickLike(item.id))
-                  // this.props.clickLike(item.id);
-                }}
-                style={styles.like_button}
-                like={item.like}>Thích</LikeButton>
-              <Button
-                onPress={() => {
-                  this.props.navigation.push('FilmDetail', {id: item.id})
-                }}
-                style={styles.watch_button}>Xem phim</Button>
+      <MainView style={{flex: 1, alignItems: 'baseline'}}>
+        <ScrollView>
+          <Header>{item.englishTitle}</Header>
+          <View style={styles.container}>
+            <Image
+              style={styles.poster}
+              source={{uri: item.image}}
+            />
+            <View style={styles.content}>
+              <Text numberOfLines={1} style={styles.title}>{item.vietnamTitle}</Text>
+              <Text style={[styles.text, {fontStyle: 'italic'}]}>Lượt view: {item.views}</Text>
+              <Text numberOfLines={5} style={styles.text}>{item.description}</Text>
+              <View style={styles.buttons_parent}>
+                <LikeButton
+                  onPress={() => {
+                    item.like = !item.like;
+                    this.setState({});
+                    // this.props.screenProps.dispatch(clickLike(item.id))
+                    // this.props.clickLike(item.id);
+                  }}
+                  style={styles.like_button}
+                  like={item.like}>Thích</LikeButton>
+                <Button
+                  onPress={() => {
+                    this.props.navigation.push('FilmDetail', {id: item.id})
+                  }}
+                  style={styles.watch_button}>Xem phim</Button>
+              </View>
             </View>
           </View>
+          <Text style={styles.text}>{item.description}</Text>
+          <Text style={[styles.text, {alignSelf: 'flex-end', textDecorationLine: 'underline',}]}>Xem thêm</Text>
           <View style={styles.separator}/>
-        </View>
+          <Text style={{color: 'orange', fontWeight: 'bold'}}>XEM TRAILER</Text>
+          <WebView
+            style={{height:this.state.width*(315/560), width:this.state.width , backgroundColor: 'transparent'}}
+            source={{html: `<iframe width="${this.state.width}" height="${this.state.width*(315/560)}" style="margin: -8px" src="https://www.youtube.com/embed/UGDMPazbrP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`}}/>
+        </ScrollView>
       </MainView>
     )
   }
@@ -146,10 +155,10 @@ const styles = StyleSheet.create({
 
   separator: {
     height: 1,
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    left: 0,
+    // position: 'absolute',
+    // bottom: 0,
+    // right: 0,
+    // left: 0,
     backgroundColor: '#ffffff99'
   }
 });

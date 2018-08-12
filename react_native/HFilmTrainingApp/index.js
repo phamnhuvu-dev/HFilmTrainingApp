@@ -7,7 +7,7 @@ import {name as appName} from './app.json';
 import {createStackNavigator} from 'react-navigation';
 
 import FilmListScreen from './src/features/film/film_list/film-list-screen'
-import FilmDetailScreen from "./src/features/film/film_detail/FilmDetailScreen";
+import FilmDetailScreen from "./src/features/film/film_detail/film-detail-screen";
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
 import reducers from "./src/reducers";
