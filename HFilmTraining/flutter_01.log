@@ -1,0 +1,72 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color packages upgrade
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The getter 'isModule' was called on null.
+Receiver: null
+Tried calling: isModule
+
+```
+#0      Object.noSuchMethod (dart:core/runtime/libobject_patch.dart:46:5)
+#1      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:138:18)
+<asynchronous suspension>
+#2      PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:84:23)
+<asynchronous suspension>
+#3      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:347:18)
+#4      _asyncThenWrapperHelper.<anonymous closure> (dart:async/runtime/libasync_patch.dart:77:64)
+#5      _rootRunUnary (dart:async/zone.dart:1134:38)
+#6      _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#7      _FutureListener.handleValue (dart:async/future_impl.dart:129:18)
+#8      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:638:45)
+#9      Future._propagateToListeners (dart:async/future_impl.dart:667:32)
+#10     Future._complete (dart:async/future_impl.dart:472:7)
+#11     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#12     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async/runtime/libasync_patch.dart:33:20)
+#13     _rootRun (dart:async/zone.dart:1126:13)
+#14     _CustomZone.run (dart:async/zone.dart:1023:19)
+#15     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:949:23)
+#16     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#17     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#18     _runPendingImmediateCallback (dart:isolate/runtime/libisolate_patch.dart:113:13)
+#19     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:166:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel master, v0.5.8-pre.108, on Mac OS X 10.13.6 17G65, locale en-VN)
+    • Flutter version 0.5.8-pre.108 at /Users/phamnhuvu/Downloads/flutter
+    • Framework revision 1cb2677234 (2 days ago), 2018-07-21 15:30:53 -0700
+    • Engine revision 96f5f5b96c
+    • Dart version 2.0.0-dev.69.0.flutter-937ee2e8ca
+
+[✓] Android toolchain - develop for Android devices (Android SDK 27.0.3)
+    • Android SDK at /Users/phamnhuvu/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-27, build-tools 27.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+    • All Android licenses accepted.
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 9.4.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 9.4.1, Build version 9F2000
+    • ios-deploy 1.9.2
+    • CocoaPods version 1.5.0
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 26.0.1
+    • Dart plugin version 173.4700
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+[✓] Connected devices (2 available)
+    • Android SDK built for x86 • emulator-5554                        • android-x86 • Android 8.0.0 (API 26) (emulator)
+    • iPhone X                  • 1CC02A16-696E-4A2C-B936-A5A7D958461D • ios         • iOS 11.4 (simulator)
+
+• No issues found!
+```

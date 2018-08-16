@@ -61,6 +61,7 @@ class FilmListScreen extends Component {
     // console.log(this.state);
     return (
       <MainView style={{flex: 1}}>
+        <StatusBar backgroundColor="orange" />
         <Header>HFilm</Header>
         <FlatList
           data={this.state.films}
@@ -79,7 +80,6 @@ class FilmListScreen extends Component {
   _renderItem = ({item, index}) => {
     return (
       <View style={itemStyles.container}>
-        <StatusBar backgroundColor="orange" />
         <Image
           style={itemStyles.poster}
           source={{uri: item.image}}
@@ -99,7 +99,7 @@ class FilmListScreen extends Component {
               index={index}
               like={item.like}>Thích</LikeButton>
             <Button
-              onPress={() => this.props.navigation.navigate('FilmDetail', {film: item})}
+              onPress={() => this.props.navigation.push('FilmDetail', {film: item})}
               style={itemStyles.watch_button}>Xem phim</Button>
           </View>
         </View>

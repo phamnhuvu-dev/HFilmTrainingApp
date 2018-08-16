@@ -1,5 +1,16 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image, BackHandler, NativeModules, WebView, Dimensions, ScrollView} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  BackHandler,
+  NativeModules,
+  WebView,
+  Dimensions,
+  ScrollView
+} from 'react-native';
 
 import Header from "../../../views/Header";
 import Button from "../../../views/Button";
@@ -49,8 +60,8 @@ class FilmDetailScreen extends Component {
     console.log("render");
     return (
       <MainView style={{flex: 1, alignItems: 'baseline'}}>
-        <ScrollView>
-          <Header>{item.englishTitle}</Header>
+        <Header>{item.englishTitle}</Header>
+        <ScrollView style={{padding: 10}}>
           <View style={styles.container}>
             <Image
               style={styles.poster}
@@ -83,8 +94,10 @@ class FilmDetailScreen extends Component {
           <View style={styles.separator}/>
           <Text style={{color: 'orange', fontWeight: 'bold'}}>XEM TRAILER</Text>
           <WebView
-            style={{height:this.state.width*(315/560), width:this.state.width , backgroundColor: 'transparent'}}
-            source={{html: `<iframe width="${this.state.width}" height="${this.state.width*(315/560)}" style="margin: -8px" src="https://www.youtube.com/embed/UGDMPazbrP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`}}/>
+            javaScriptEnabled
+            domStorageEnabled
+            style={{height: this.state.width * (315 / 560), width: this.state.width, backgroundColor: 'transparent'}}
+            source={{html: `<iframe width="${this.state.width}" height="${this.state.width * (315 / 560)}" style="margin: -8px" src="https://www.youtube.com/embed/UGDMPazbrP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`}}/>
         </ScrollView>
       </MainView>
     )
@@ -109,7 +122,6 @@ const styles = StyleSheet.create({
   container: {
     height: 200,
     flexDirection: 'row',
-    margin: 10
   },
 
   poster: {
